@@ -1,0 +1,102 @@
+/* styles.css */
+body {
+    background: #ffb3c1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    transition: background 0.5s;
+    overflow: hidden;
+}
+
+h1 {
+    color: #c9184a;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+#yesBtn {
+    background: #c9184a;
+    color: white;
+}
+
+#noBtn {
+    background: #ff8fab;
+    color: white;
+}
+
+.celebration {
+    display: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.celebration h2 {
+    color: #c9184a;
+    font-size: 3em;
+    animation: pulse 1s infinite;
+    margin-bottom: 30px;
+}
+
+.gif-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gif-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gif-grid img:hover {
+    transform: scale(1.05);
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #ff0000;
+    animation: confettiFall 3s linear infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
